@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Speak">speak</string>
+    <string name="Image">image</string>
+    <string name="Delete">delete</string>
+</resources>

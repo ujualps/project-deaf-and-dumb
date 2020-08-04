@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6e6"
+    tools:context=".MessageActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/profile_image"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:layout_marginLeft="25dp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_marginStart="25dp"/>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:layout_below="@+id/bar_layout"
+        android:background="@color/mediumGrey"
+        android:layout_above="@+id/bottom" />
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:background="#fff">
+
+        <EditText
+            android:id="@+id/text_send"
+            android:layout_width="406dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="5dp"
+            android:layout_toEndOf="@id/btn_gif"
+            android:paddingRight="70dp"
+            android:background="@android:color/transparent"
+            android:hint="Type a message..." />
+
+        <ImageButton
+            android:id="@+id/btn_gif"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/text_send"
+            android:background="@drawable/gif_press"
+            android:onClick="GifSelect"
+            />
+
+
+        <ImageButton
+            android:id="@+id/btn_mic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_toStartOf="@+id/btn_send"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:layout_alignBottom="@+id/text_send"
+            android:background="@drawable/mic_image"
+            android:onClick="Mic" />
+
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/btn_send"
+            android:layout_alignBottom="@+id/text_send"
+            android:background="@drawable/ic_action_name"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
